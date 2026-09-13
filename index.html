@@ -236,6 +236,8 @@ table.cmp td.win::before{
   transition:transform .15s ease, opacity .15s ease;
 }
 .cta:hover{ opacity:.88; }
+.cta-row{ display:flex; gap:10px; flex-wrap:wrap; }
+.cta-row .cta{ flex:1 1 auto; }
 :root[data-theme="dark"] .cta, @media (prefers-color-scheme:dark){ }
 
 /* baggage grid */
@@ -282,12 +284,12 @@ footer li{ margin-bottom:4px; }
   <div class="wrap">
     <p class="eyebrow">Сравнение перелётов · 2 взрослых пассажира</p>
     <h1 class="route fade-up">Белград <span class="arrow">→</span> Рио-де-Жанейро</h1>
-    <p class="sub">Turkish Airlines, Qatar Airways и Emirates — три варианта перелёта на воскресенье 1 ноября 2026. Цены указаны в долларах США по приблизительному курсу на дату подготовки страницы.</p>
+    <p class="sub">Turkish Airlines, Qatar Airways, Emirates и раздельная связка Turkish + LATAM — четыре варианта перелёта на воскресенье 1 ноября 2026. Цены указаны в долларах США по приблизительному курсу на дату подготовки страницы.</p>
     <div class="meta-row">
       <span class="chip">📅 <b>1 нояб. 2026</b>, туда</span>
       <span class="chip">👥 <b>2</b> взрослых</span>
       <span class="chip">💺 Economy</span>
-      <span class="chip">✈️ <b>3</b> варианта перелёта</span>
+      <span class="chip">✈️ <b>4</b> варианта перелёта</span>
     </div>
   </div>
 </header>
@@ -307,6 +309,7 @@ footer li{ margin-bottom:4px; }
           <th class="carrier-th">🔴 Turkish Airlines</th>
           <th class="carrier-th">🟣 Qatar Airways</th>
           <th class="carrier-th">🟢 Emirates</th>
+          <th class="carrier-th">🔵 Turkish + LATAM</th>
         </tr>
       </thead>
       <tbody>
@@ -321,54 +324,65 @@ footer li{ margin-bottom:4px; }
           <td>
             <div class="price-usd">≈ $6 239.96</div>
           </td>
+          <td>
+            <div class="price-usd">≈ $3 897.04</div>
+          </td>
         </tr>
         <tr>
           <td class="label">Тариф</td>
           <td>Economy <b>Flexible</b> (класс M‑M‑U)</td>
           <td>Economy <b>Comfort</b></td>
           <td>Economy <b>Flex</b></td>
+          <td>Economy Flexible + LATAM <b>Standard</b> (2 отдельных билета)</td>
         </tr>
         <tr>
           <td class="label">Общее время в пути</td>
           <td>23 ч 20 мин</td>
           <td>30 ч 25 мин</td>
-          <td class="win">21 ч 35 мин</td>
+          <td>21 ч 35 мин</td>
+          <td class="win">21 ч 15 мин</td>
         </tr>
         <tr>
           <td class="label">Пересадки</td>
           <td class="win">1 пересадка — Стамбул (IST)</td>
           <td>2 пересадки — Доха (DOH) и Сан-Паулу (GRU)</td>
           <td class="win">1 пересадка — Дубай (DXB)</td>
+          <td class="win">1 пересадка — Сан-Паулу (GRU), днём, без ночёвки</td>
         </tr>
         <tr>
           <td class="label">Кто выполняет рейсы</td>
           <td>Turkish Airlines + <b>Azul Linhas Aéreas</b> (последний сегмент)</td>
           <td>Qatar Airways + <b>LATAM Airlines Brasil</b> (последний сегмент)</td>
           <td><b>flydubai</b> (1‑й участок) + Emirates (2‑й участок)</td>
+          <td>Turkish Airlines, затем отдельным билетом <b>LATAM Airlines Brasil</b></td>
         </tr>
         <tr>
           <td class="label">Регистрируемый багаж</td>
           <td class="win">2 места × 23 кг на пассажира</td>
           <td class="win">2 места × 23 кг на пассажира</td>
           <td class="win">2 места × 23 кг на пассажира</td>
+          <td>2×23 кг на рейсе Turkish; норма LATAM на этом экране не показана</td>
         </tr>
         <tr>
           <td class="label">Ручная кладь</td>
           <td class="win">1 место, 8 кг</td>
           <td>1 место, 7 кг</td>
           <td>1 место, 7 кг</td>
+          <td>1 место, 8 кг на рейсе Turkish; норма LATAM не показана</td>
         </tr>
         <tr>
           <td class="label">Выбор места</td>
           <td>💳 платно (не входит в тариф Flexible)</td>
           <td class="win">✅ стандартный и предпочтительный — бесплатно</td>
           <td class="win">✅ бесплатно в тарифе Flex</td>
+          <td>💳 платно на Turkish; условия LATAM не показаны</td>
         </tr>
         <tr>
           <td class="label">Возврат / изменения</td>
           <td>Изменение без сбора · полный возврат в течение 24 ч</td>
           <td class="win">Изменения не ограничены (без доп. сбора) · отмена в любое время</td>
           <td>Смена $174,08 / возврат $261,11 за билет (в тарифе Flex Plus — бесплатно, но дороже)</td>
+          <td>Turkish — как в тарифе Flexible; тариф LATAM <b>Standard — невозвратный</b> (Flex с возвратом в кредит — дороже)</td>
         </tr>
       </tbody>
     </table>
@@ -546,6 +560,73 @@ footer li{ margin-bottom:4px; }
       </div>
     </article>
 
+    <!-- TURKISH + LATAM (SPLIT TICKETS) -->
+    <article class="card fade-up">
+      <div class="card-head">
+        <div class="name">Turkish + LATAM
+          <span>2 отдельных билета · без ночной пересадки в Сан-Паулу</span>
+        </div>
+        <div class="badge-price">
+          <div class="usd">$3 897.04</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="num">21ч 15м</div><div class="cap">в пути всего</div></div>
+        <div class="stat"><div class="num">1</div><div class="cap">пересадка</div></div>
+        <div class="stat"><div class="num">3</div><div class="cap">перелёта</div></div>
+      </div>
+
+      <div class="timeline">
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">15:30 · вс, 1 нояб.</div>
+            <div class="place">Белград <small>(BEG), Никола Тесла — Терминал 2</small></div>
+            <div class="dur-badge"><span class="ic">✈</span> 1 ч 50 мин в полёте</div>
+            <div class="flightinfo"><span class="op">TK1080</span> · Turkish Airlines</div>
+          </div>
+        </div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">19:20 → 20:35</div>
+            <div class="place">Стамбул <small>(IST)</small></div>
+          </div>
+        </div>
+        <div class="layover">⏱ пересадка <span class="dur">1 ч 15 мин</span> в Стамбуле</div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">20:35 → 04:20 <small>(+1 день)</small></div>
+            <div class="place">Стамбул → Сан-Паулу <small>(GRU), Гуарульюс — Терминал 3</small></div>
+            <div class="dur-badge"><span class="ic">✈</span> 13 ч 45 мин в полёте</div>
+            <div class="flightinfo"><span class="op">TK215</span> · Turkish Airlines · билет 1 заканчивается здесь</div>
+          </div>
+        </div>
+        <div class="layover">⏱ пересадка <span class="dur">3 ч 25 мин</span> в Сан-Паулу — днём, без ночёвки (04:20 → 07:45)</div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div></div>
+          <div class="body">
+            <div class="time">07:45 → 08:45 <small>пн, 2 нояб.</small></div>
+            <div class="place">Сан-Паулу <small>(GRU)</small> → Рио-де-Жанейро <small>(GIG)</small></div>
+            <div class="dur-badge"><span class="ic">✈</span> 1 ч в полёте, прямой</div>
+            <div class="flightinfo"><span class="op">LATAM Airlines Brasil</span> · билет 2, покупается отдельно</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-foot">
+        <div class="fare-note">🎟️ Два отдельных PNR: Turkish Airlines Economy Flexible до Сан-Паулу (RSD 163 061 / пассажир ≈ $1 612,50) + отдельный билет LATAM Standard, невозвратный, Сан-Паулу → Рио напрямую (USD 336,02 / пассажир). Между билетами нет защиты стыковки: при задержке Turkish придётся покупать новый билет LATAM.</div>
+        <div class="cta-row">
+          <a class="cta" href="https://www.turkishairlines.com/en-int/flights/booking/availability-international/?cId=29a526a9-fea6-4639-bee6-7fddd0a8c6d6" target="_blank" rel="noopener">Билет 1 — Turkish →</a>
+          <a class="cta" href="https://www.latamairlines.com/au/en/flight-offers/?origin=GRU&outbound=2026-11-02T00%3A00%3A00.000Z&destination=RIO&adt=2&chd=0&inf=0&trip=OW&cabin=Economy&redemption=false&sort=FLIGHT_DURATION%2Casc&exp_id=eeb010dd-c316-4447-9523-78a23ecfba7d" target="_blank" rel="noopener">Билет 2 — LATAM →</a>
+        </div>
+      </div>
+    </article>
+
   </div>
 
   <div class="section-head">
@@ -587,6 +668,18 @@ footer li{ margin-bottom:4px; }
         <dt>Смена билета</dt><dd class="no">$174,08 / билет</dd>
         <dt>Возврат билета</dt><dd class="no">$261,11 / билет</dd>
         <dt>Неявка на рейс</dt><dd class="no">от $348,15 / билет</dd>
+      </dl>
+    </div>
+
+    <div class="bag-card fade-up">
+      <h3>🔵 Turkish + LATAM — раздельные билеты</h3>
+      <dl class="bag">
+        <dt>Ручная кладь (Turkish)</dt><dd>1 место, 8 кг</dd>
+        <dt>Регистрируемый багаж (Turkish)</dt><dd class="ok">2 места × 23 кг</dd>
+        <dt>Выбор места (Turkish)</dt><dd class="no">платно, не включён</dd>
+        <dt>Тариф LATAM</dt><dd>Standard, невозвратный</dd>
+        <dt>Багаж и место (LATAM)</dt><dd>не показаны на этапе выбора цены</dd>
+        <dt>Защита стыковки между билетами</dt><dd class="no">отсутствует</dd>
       </dl>
     </div>
   </div>
