@@ -190,24 +190,34 @@ table.cmp td.win::before{
 .leg .body{ padding-bottom:22px; }
 .leg:last-of-type .body{ padding-bottom:6px; }
 .leg .time{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:15px; }
-.leg .place{ font-size:13.5px; color:var(--ink); font-weight:500; }
+.leg .place{ font-size:14.5px; color:var(--ink); font-weight:600; margin-top:1px; }
 .leg .place small{ color:var(--ink-soft); font-weight:400; }
-.leg .flightinfo{ font-size:12.5px; color:var(--ink-soft); margin-top:3px; line-height:1.5; }
+.leg .flightinfo{ font-size:12.5px; color:var(--ink-soft); margin-top:8px; line-height:1.5; }
 .leg .flightinfo .op{ color:var(--gold); font-weight:600; }
 
+.dur-badge{
+  display:inline-flex; align-items:center; gap:7px;
+  background:var(--accent-soft); color:var(--accent);
+  font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:15px;
+  padding:6px 13px; border-radius:999px; white-space:nowrap;
+  margin-top:8px;
+}
+.dur-badge .ic{ font-size:14px; }
+
 .layover{
-  margin:2px 0 2px 70px;
-  padding:9px 14px;
+  margin:14px 0 14px 70px;
+  padding:12px 18px;
   background:var(--accent-soft);
-  border-radius:9px;
-  font-size:12.5px;
-  color:var(--ink-soft);
-  display:flex; align-items:center; gap:8px;
+  border-radius:11px;
+  font-size:14.5px;
+  font-weight:500;
+  color:var(--ink);
+  display:flex; align-items:center; gap:10px;
   max-width:fit-content;
 }
-.layover b{ color:var(--ink); font-family:'IBM Plex Mono',monospace; }
-.layover.warn{ background:var(--bad-soft); color:var(--bad); }
-.layover.warn b{ color:var(--bad); }
+.layover .dur{ color:var(--accent); font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:17px; }
+.layover.warn{ background:var(--bad-soft); color:var(--ink); }
+.layover.warn .dur{ color:var(--bad); }
 
 .card-foot{
   margin-top:auto;
@@ -383,7 +393,8 @@ footer li{ margin-bottom:4px; }
           <div class="body">
             <div class="time">15:30 · вс, 1 нояб.</div>
             <div class="place">Белград <small>(BEG), Никола Тесла — Терминал 2</small></div>
-            <div class="flightinfo"><span class="op">TK1080</span> · Airbus A321‑200neo (узкофюзеляжный) · 1 ч 50 мин</div>
+            <div class="dur-badge"><span class="ic">✈</span> 1 ч 50 мин в полёте</div>
+            <div class="flightinfo"><span class="op">TK1080</span> · Turkish Airlines</div>
           </div>
         </div>
 
@@ -394,24 +405,26 @@ footer li{ margin-bottom:4px; }
             <div class="place">Стамбул <small>(IST), Стамбульский аэропорт</small></div>
           </div>
         </div>
-        <div class="layover">⏱ пересадка <b>1 ч 15 мин</b> в Стамбуле</div>
+        <div class="layover">⏱ пересадка <span class="dur">1 ч 15 мин</span> в Стамбуле</div>
 
         <div class="leg">
           <div class="rail"><div class="dot"></div><div class="line"></div></div>
           <div class="body">
             <div class="time">20:35 → 04:20 <small>(+1 день)</small></div>
             <div class="place">Стамбул → Сан-Паулу <small>(GRU), Гуарульюс — прибытие в Терминал 3</small></div>
-            <div class="flightinfo"><span class="op">TK215</span> · Airbus A350‑900 (широкофюзеляжный) · 13 ч 45 мин</div>
+            <div class="dur-badge"><span class="ic">✈</span> 13 ч 45 мин в полёте</div>
+            <div class="flightinfo"><span class="op">TK215</span> · Turkish Airlines</div>
           </div>
         </div>
-        <div class="layover warn">⚠ пересадка <b>5 ч 30 мин</b> в Сан-Паулу — <b>смена терминала: T3 → T1</b></div>
+        <div class="layover warn">⚠ пересадка <span class="dur">5 ч 30 мин</span> в Сан-Паулу — смена терминала T3 → T1</div>
 
         <div class="leg">
           <div class="rail"><div class="dot"></div></div>
           <div class="body">
             <div class="time">09:50 → 10:50 <small>пн, 2 нояб.</small></div>
             <div class="place">Сан-Паулу (T1) → Рио-де-Жанейро <small>(SDU), а/п Сантос-Дюмон</small></div>
-            <div class="flightinfo"><span class="op">Azul Linhas Aéreas AD4193</span> · 1 ч</div>
+            <div class="dur-badge"><span class="ic">✈</span> 1 ч в полёте</div>
+            <div class="flightinfo"><span class="op">AD4193</span> · Azul Linhas Aéreas</div>
           </div>
         </div>
       </div>
@@ -444,27 +457,30 @@ footer li{ margin-bottom:4px; }
           <div class="body">
             <div class="time">11:55 → 18:55 · вс, 1 нояб.</div>
             <div class="place">Белград <small>(BEG)</small> → Доха <small>(DOH)</small></div>
-            <div class="flightinfo"><span class="op">QR232</span> · Airbus A320 · Qatar Airways · 5 ч</div>
+            <div class="dur-badge"><span class="ic">✈</span> 5 ч в полёте</div>
+            <div class="flightinfo"><span class="op">QR232</span> · Qatar Airways</div>
           </div>
         </div>
-        <div class="layover">⏱ пересадка <b>6 ч 40 мин</b> в Дохе — Hamad International Airport (единый терминал, зона duty-free/лаунджей)</div>
+        <div class="layover">⏱ пересадка <span class="dur">6 ч 40 мин</span> в Дохе — Hamad International Airport</div>
 
         <div class="leg">
           <div class="rail"><div class="dot"></div><div class="line"></div></div>
           <div class="body">
             <div class="time">01:35 → 10:40 <small>пн, 2 нояб.</small></div>
             <div class="place">Доха → Сан-Паулу <small>(GRU), Гуарульюс</small></div>
-            <div class="flightinfo"><span class="op">QR779</span> · Airbus A350-1000 · Qatar Airways · Wi-Fi Starlink · 15 ч 05 мин</div>
+            <div class="dur-badge"><span class="ic">✈</span> 15 ч 05 мин в полёте</div>
+            <div class="flightinfo"><span class="op">QR779</span> · Qatar Airways · Wi-Fi Starlink</div>
           </div>
         </div>
-        <div class="layover warn">⚠ пересадка <b>2 ч 40 мин</b> в Сан-Паулу — Guarulhos (GRU) перед стыковочным рейсом LATAM</div>
+        <div class="layover warn">⚠ пересадка <span class="dur">2 ч 40 мин</span> в Сан-Паулу — Guarulhos (GRU) перед рейсом LATAM</div>
 
         <div class="leg">
           <div class="rail"><div class="dot"></div></div>
           <div class="body">
             <div class="time">13:20 → 14:20 <small>пн, 2 нояб.</small></div>
             <div class="place">Сан-Паулу → Рио-де-Жанейро <small>(GIG), Galeão — Antonio Carlos Jobim International</small></div>
-            <div class="flightinfo"><span class="op">QR7270</span> · Airbus A319 · LATAM Airlines Brasil · 1 ч</div>
+            <div class="dur-badge"><span class="ic">✈</span> 1 ч в полёте</div>
+            <div class="flightinfo"><span class="op">QR7270</span> · LATAM Airlines Brasil</div>
           </div>
         </div>
       </div>
