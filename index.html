@@ -1,0 +1,590 @@
+<title>Белград — Рио</title>
+<meta name="description" content="Turkish Airlines vs Qatar Airways, 2 взрослых, 1 ноября 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ec;
+  --paper:#fffdf8;
+  --ink:#1b1d1f;
+  --ink-soft:#54524c;
+  --line:#e2ddd0;
+  --line-strong:#c9c2b0;
+  --accent:#294a63;
+  --accent-soft:#e7edf1;
+  --gold:#a9782f;
+  --gold-soft:#f4ead4;
+  --good:#3d6b47;
+  --good-soft:#e6efe4;
+  --bad:#9a4433;
+  --bad-soft:#f6e7e2;
+  --shadow: 0 1px 2px rgba(20,20,15,0.04), 0 8px 24px -12px rgba(20,20,15,0.12);
+  --radius: 14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171a;
+    --paper:#1c1e22;
+    --ink:#eee9df;
+    --ink-soft:#a7a297;
+    --line:#33352f;
+    --line-strong:#46483f;
+    --accent:#8fb4d3;
+    --accent-soft:#212c35;
+    --gold:#d9ac5f;
+    --gold-soft:#2b2416;
+    --good:#8dc09a;
+    --good-soft:#1e2a20;
+    --bad:#e0a08f;
+    --bad-soft:#2e211c;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171a;
+  --paper:#1c1e22;
+  --ink:#eee9df;
+  --ink-soft:#a7a297;
+  --line:#33352f;
+  --line-strong:#46483f;
+  --accent:#8fb4d3;
+  --accent-soft:#212c35;
+  --gold:#d9ac5f;
+  --gold-soft:#2b2416;
+  --good:#8dc09a;
+  --good-soft:#1e2a20;
+  --bad:#e0a08f;
+  --bad-soft:#2e211c;
+  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+}
+*{box-sizing:border-box;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  line-height:1.5;
+}
+::selection{ background:var(--gold-soft); }
+.wrap{ max-width:1180px; margin:0 auto; padding:0 24px 96px; }
+.mono{ font-family:'IBM Plex Mono', ui-monospace, monospace; }
+
+/* ---- header ---- */
+header.top{
+  padding:56px 24px 40px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(1100px 400px at 15% -20%, var(--accent-soft), transparent 60%),
+    var(--bg);
+}
+.eyebrow{
+  font-size:12.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-soft); font-weight:600; margin:0 0 14px;
+  display:flex; align-items:center; gap:10px;
+}
+.eyebrow::before{ content:""; width:26px; height:1px; background:var(--line-strong); display:inline-block; }
+h1.route{
+  font-family:'Fraunces', Georgia, serif;
+  font-weight:600;
+  font-size:clamp(34px, 5.2vw, 60px);
+  letter-spacing:-0.01em;
+  margin:0 0 6px;
+  text-wrap:balance;
+  display:flex; align-items:baseline; gap:18px; flex-wrap:wrap;
+}
+h1.route .arrow{ color:var(--gold); font-size:0.6em; }
+.sub{
+  color:var(--ink-soft); font-size:16px; max-width:640px; margin:14px 0 0;
+}
+.meta-row{
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;
+}
+.chip{
+  border:1px solid var(--line-strong);
+  background:var(--paper);
+  border-radius:999px;
+  padding:7px 14px;
+  font-size:13px;
+  color:var(--ink-soft);
+  display:flex; align-items:center; gap:7px;
+}
+.chip b{ color:var(--ink); font-weight:600; }
+
+/* ---- section titles ---- */
+.section-head{
+  margin:64px 0 24px;
+  display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
+}
+.section-head h2{
+  font-family:'Fraunces', Georgia, serif;
+  font-size:26px; font-weight:600; margin:0;
+}
+.section-head .hint{ color:var(--ink-soft); font-size:14px; }
+
+/* ---- summary table ---- */
+.summary{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:var(--paper);
+  box-shadow:var(--shadow);
+  overflow-x:auto;
+}
+table.cmp{ width:100%; border-collapse:collapse; min-width:640px; }
+table.cmp th, table.cmp td{ padding:16px 20px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; }
+table.cmp thead th{
+  font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft);
+  font-weight:600; background:var(--accent-soft); border-bottom:1px solid var(--line-strong);
+}
+table.cmp thead th.carrier-th{ color:var(--ink); font-size:14px; text-transform:none; letter-spacing:0; }
+table.cmp tbody tr:last-child td{ border-bottom:none; }
+table.cmp td.label{ color:var(--ink-soft); font-size:13.5px; width:190px; white-space:nowrap; }
+table.cmp td.win{ position:relative; }
+table.cmp td.win::before{
+  content:"лучше"; position:absolute; top:14px; right:14px;
+  font-size:10.5px; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--good); background:var(--good-soft); padding:2px 8px; border-radius:999px;
+}
+.price-usd{ font-family:'IBM Plex Mono', monospace; font-size:19px; font-weight:600; }
+.price-native{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
+
+/* ---- itinerary cards ---- */
+.cards{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media (max-width:860px){ .cards{ grid-template-columns:1fr; } }
+
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  display:flex; flex-direction:column;
+}
+.card-head{
+  padding:22px 24px 18px;
+  border-bottom:1px dashed var(--line-strong);
+  display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
+}
+.card-head .name{ font-family:'Fraunces',serif; font-weight:600; font-size:21px; }
+.card-head .name span{ display:block; font-family:'Inter',sans-serif; font-weight:500; font-size:12.5px; color:var(--ink-soft); margin-top:3px; }
+.badge-price{ text-align:right; }
+.badge-price .usd{ font-family:'IBM Plex Mono',monospace; font-size:24px; font-weight:600; color:var(--accent); }
+.badge-price .native{ font-size:11.5px; color:var(--ink-soft); }
+
+.stat-row{
+  display:flex; gap:0; border-bottom:1px solid var(--line);
+}
+.stat{
+  flex:1; padding:14px 16px; border-right:1px solid var(--line);
+  text-align:center;
+}
+.stat:last-child{ border-right:none; }
+.stat .num{ font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:600; }
+.stat .cap{ font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em; margin-top:2px; }
+
+.timeline{ padding:20px 24px 8px; position:relative; }
+.leg{ display:grid; grid-template-columns:56px 1fr; gap:14px; position:relative; }
+.leg .rail{ position:relative; display:flex; flex-direction:column; align-items:center; }
+.leg .dot{ width:9px; height:9px; border-radius:50%; background:var(--accent); border:2px solid var(--paper); box-shadow:0 0 0 1px var(--accent); z-index:1; }
+.leg .line{ flex:1; width:2px; background:var(--line-strong); margin:2px 0; }
+.leg .body{ padding-bottom:22px; }
+.leg:last-of-type .body{ padding-bottom:6px; }
+.leg .time{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:15px; }
+.leg .place{ font-size:13.5px; color:var(--ink); font-weight:500; }
+.leg .place small{ color:var(--ink-soft); font-weight:400; }
+.leg .flightinfo{ font-size:12.5px; color:var(--ink-soft); margin-top:3px; line-height:1.5; }
+.leg .flightinfo .op{ color:var(--gold); font-weight:600; }
+
+.layover{
+  margin:2px 0 2px 70px;
+  padding:9px 14px;
+  background:var(--accent-soft);
+  border-radius:9px;
+  font-size:12.5px;
+  color:var(--ink-soft);
+  display:flex; align-items:center; gap:8px;
+  max-width:fit-content;
+}
+.layover b{ color:var(--ink); font-family:'IBM Plex Mono',monospace; }
+.layover.warn{ background:var(--bad-soft); color:var(--bad); }
+.layover.warn b{ color:var(--bad); }
+
+.card-foot{
+  margin-top:auto;
+  border-top:1px solid var(--line);
+  padding:18px 24px 22px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.fare-note{
+  font-size:12.5px; color:var(--ink-soft); background:var(--bg); border:1px solid var(--line);
+  padding:10px 12px; border-radius:9px; display:flex; gap:8px;
+}
+.cta{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:13px 18px; border-radius:10px;
+  background:var(--ink); color:var(--paper);
+  font-weight:600; font-size:14.5px; text-decoration:none;
+  transition:transform .15s ease, opacity .15s ease;
+}
+.cta:hover{ opacity:.88; }
+:root[data-theme="dark"] .cta, @media (prefers-color-scheme:dark){ }
+
+/* baggage grid */
+.bag-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:8px; }
+@media (max-width:860px){ .bag-grid{ grid-template-columns:1fr; } }
+.bag-card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px; box-shadow:var(--shadow); }
+.bag-card h3{ font-family:'Fraunces',serif; font-size:18px; margin:0 0 14px; }
+dl.bag{ margin:0; display:grid; grid-template-columns:1fr auto; gap:10px 16px; }
+dl.bag dt{ color:var(--ink-soft); font-size:13.5px; }
+dl.bag dd{ margin:0; font-size:13.5px; font-weight:600; text-align:right; }
+dl.bag dd.ok{ color:var(--good); }
+dl.bag dd.no{ color:var(--bad); }
+.divider-thin{ height:1px; background:var(--line); margin:14px 0; }
+
+/* callout */
+.callout{
+  border:1px solid var(--line-strong);
+  background:var(--gold-soft);
+  border-radius:var(--radius);
+  padding:20px 24px;
+  display:flex; gap:14px;
+  margin-top:24px;
+}
+.callout .ic{ font-size:20px; line-height:1; }
+.callout p{ margin:0; font-size:14px; color:var(--ink); }
+.callout p+p{ margin-top:8px; }
+
+/* footer / sources */
+footer{
+  margin-top:72px; padding-top:24px; border-top:1px solid var(--line);
+  font-size:12.5px; color:var(--ink-soft);
+}
+footer a{ color:var(--accent); }
+footer ul{ margin:10px 0 0; padding-left:18px; }
+footer li{ margin-bottom:4px; }
+
+[hidden]{ display:none !important; }
+
+@media (prefers-reduced-motion:no-preference){
+  .fade-up{ opacity:0; transform:translateY(14px); }
+}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Сравнение перелётов · 2 взрослых пассажира</p>
+    <h1 class="route fade-up">Белград <span class="arrow">→</span> Рио-де-Жанейро</h1>
+    <p class="sub">Turkish Airlines и Qatar Airways, вылет в воскресенье 1 ноября 2026. Все цены указаны в долларах США по курсу на 13 сентября 2026 — точный курс и первоисточники в конце страницы.</p>
+    <div class="meta-row">
+      <span class="chip">📅 <b>1 нояб. 2026</b>, туда</span>
+      <span class="chip">👥 <b>2</b> взрослых</span>
+      <span class="chip">💺 Economy</span>
+      <span class="chip">🎫 Один билет = оба сегмента</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="section-head">
+    <h2>Коротко: цена и время в пути</h2>
+    <span class="hint">за обоих пассажиров · пересчёт в USD</span>
+  </div>
+
+  <div class="summary fade-up">
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th>Параметр</th>
+          <th class="carrier-th">🔴 Turkish Airlines</th>
+          <th class="carrier-th">🟣 Qatar Airways</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label">Стоимость, 2 пассажира</td>
+          <td class="win">
+            <div class="price-usd">≈ $3 480.55</div>
+            <div class="price-native mono">RSD 351 964,00</div>
+          </td>
+          <td>
+            <div class="price-usd">≈ $2 896.74</div>
+            <div class="price-native mono">€2 497,62</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Цена за 1 пассажира</td>
+          <td><div class="price-usd">≈ $1 740.27</div><div class="price-native mono">RSD 175 982,00</div></td>
+          <td class="win"><div class="price-usd">≈ $1 448.37</div><div class="price-native mono">≈ €1 248,81</div></td>
+        </tr>
+        <tr>
+          <td class="label">Тариф</td>
+          <td>Economy <b>Flexible</b> (класс M‑M‑U)</td>
+          <td>Economy <b>Comfort</b></td>
+        </tr>
+        <tr>
+          <td class="label">Общее время в пути</td>
+          <td class="win">23 ч 20 мин</td>
+          <td>30 ч 25 мин</td>
+        </tr>
+        <tr>
+          <td class="label">Пересадки</td>
+          <td class="win">1 пересадка — Стамбул (IST)</td>
+          <td>2 пересадки — Доха (DOH) и Сан-Паулу (GRU)</td>
+        </tr>
+        <tr>
+          <td class="label">Кто выполняет рейсы</td>
+          <td>Turkish Airlines + <b>Azul Linhas Aéreas</b> (последний сегмент)</td>
+          <td>Qatar Airways + <b>LATAM Airlines Brasil</b> (последний сегмент)</td>
+        </tr>
+        <tr>
+          <td class="label">Регистрируемый багаж</td>
+          <td class="win">2 места × 23 кг на пассажира</td>
+          <td class="win">2 места × 23 кг на пассажира</td>
+        </tr>
+        <tr>
+          <td class="label">Ручная кладь</td>
+          <td>1 место, 8 кг</td>
+          <td class="win">1 место, 7 кг (лимит по факту у Qatar ниже нормы)</td>
+        </tr>
+        <tr>
+          <td class="label">Выбор места</td>
+          <td>❌ не входит в тариф Flexible</td>
+          <td class="win">✅ стандартный и предпочтительный — бесплатно</td>
+        </tr>
+        <tr>
+          <td class="label">Возврат / изменения</td>
+          <td>Изменение без сбора · полный возврат в течение 24 ч</td>
+          <td>Изменения не ограничены (без доп. сбора) · отмена в любое время</td>
+        </tr>
+        <tr>
+          <td class="label">Мили / авиабонусы</td>
+          <td>7 573 мили Miles&amp;Smiles</td>
+          <td>9 585 Avios (начисляются после входа в Privilege Club)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout fade-up">
+    <div class="ic">💱</div>
+    <div>
+      <p><b>О курсе валют:</b> Turkish Airlines выставляет цену в сербских динарах (RSD), Qatar Airways — в евро (EUR). На странице авиакомпаний доллары США не показываются напрямую, поэтому суммы пересчитаны по курсу на 13 сентября 2026: 1 USD ≈ 101,12 RSD (Investing.com) и 1 EUR ≈ 1,1598 USD (XE/Wise). Курс плавающий — на дату вашей реальной покупки итоговая сумма в долларах может отличаться на 1–3%.</p>
+      <p><b>Итог по деньгам:</b> Qatar Airways дешевле примерно на <b>$584</b> за двоих, но летит на <b>7 часов дольше</b> и с двумя пересадками вместо одной.</p>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <h2>Маршрут по сегментам</h2>
+    <span class="hint">время местное в каждом аэропорту</span>
+  </div>
+
+  <div class="cards">
+
+    <!-- TURKISH -->
+    <article class="card fade-up">
+      <div class="card-head">
+        <div class="name">Turkish Airlines
+          <span>+ Azul Linhas Aéreas на финальном сегменте</span>
+        </div>
+        <div class="badge-price">
+          <div class="usd">$3 480.55</div>
+          <div class="native mono">RSD 351 964,00 · 2 пасс.</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="num">23ч 20м</div><div class="cap">в пути всего</div></div>
+        <div class="stat"><div class="num">1</div><div class="cap">пересадка</div></div>
+        <div class="stat"><div class="num">3</div><div class="cap">перелёта</div></div>
+      </div>
+
+      <div class="timeline">
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">15:30 · вс, 1 нояб.</div>
+            <div class="place">Белград <small>(BEG), Никола Тесла — Терминал 2</small></div>
+            <div class="flightinfo"><span class="op">TK1080</span> · Airbus A321‑200neo (узкофюзеляжный) · 1 ч 50 мин</div>
+          </div>
+        </div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">19:20 → 20:35</div>
+            <div class="place">Стамбул <small>(IST), Стамбульский аэропорт</small></div>
+            <div class="flightinfo">Прибытие и вылет — терминал в описании рейса не указан отдельно</div>
+          </div>
+        </div>
+        <div class="layover">⏱ пересадка <b>1 ч 15 мин</b> в Стамбуле</div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">20:35 → 04:20 <small>(+1 день)</small></div>
+            <div class="place">Стамбул → Сан-Паулу <small>(GRU), Гуарульюс — прибытие в Терминал 3</small></div>
+            <div class="flightinfo"><span class="op">TK215</span> · Airbus A350‑900 (широкофюзеляжный) · 13 ч 45 мин</div>
+          </div>
+        </div>
+        <div class="layover warn">⚠ пересадка <b>5 ч 30 мин</b> в Сан-Паулу — <b>смена терминала: T3 → T1</b></div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div></div>
+          <div class="body">
+            <div class="time">09:50 → 10:50 <small>пн, 2 нояб.</small></div>
+            <div class="place">Сан-Паулу (T1) → Рио-де-Жанейро <small>(SDU), а/п Сантос-Дюмон</small></div>
+            <div class="flightinfo"><span class="op">Azul Linhas Aéreas AD4193</span> · тип самолёта на сайте не указан · 1 ч</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-foot">
+        <div class="fare-note">🎒 Тариф Economy Flexible: смена билета без сбора, полный возврат в течение 24 ч. Место в самолёте — платно/по наличию, в тариф не включено.</div>
+        <div class="fare-note">⚠️ Финальный сегмент GRU → SDU выполняет Azul Linhas Aéreas, а не Turkish Airlines: питание, Wi-Fi, развлекательная система и начисление миль на этом участке могут отличаться от основного рейса.</div>
+        <a class="cta" href="https://www.turkishairlines.com/ru-int/flights/booking/availability-international/?cId=52b24839-66e5-4469-b19f-804dbb5cae2b" target="_blank" rel="noopener">Открыть бронирование Turkish Airlines →</a>
+      </div>
+    </article>
+
+    <!-- QATAR -->
+    <article class="card fade-up">
+      <div class="card-head">
+        <div class="name">Qatar Airways
+          <span>+ LATAM Airlines Brasil на финальном сегменте</span>
+        </div>
+        <div class="badge-price">
+          <div class="usd">$2 896.74</div>
+          <div class="native mono">€2 497,62 · 2 пасс.</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="num">30ч 25м</div><div class="cap">в пути всего</div></div>
+        <div class="stat"><div class="num">2</div><div class="cap">пересадки</div></div>
+        <div class="stat"><div class="num">3</div><div class="cap">перелёта</div></div>
+      </div>
+
+      <div class="timeline">
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">11:55 · вс, 1 нояб.</div>
+            <div class="place">Белград <small>(BEG)</small></div>
+            <div class="flightinfo"><span class="op">Qatar Airways</span> · перелёт ≈ 5 ч</div>
+          </div>
+        </div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">прибытие / вылет в тот же день</div>
+            <div class="place">Доха <small>(DOH), Hamad International</small></div>
+            <div class="flightinfo">Терминал на сайте Qatar Airways отдельно не указан (для Qatar Airways в Дохе используется единый терминал HIA)</div>
+          </div>
+        </div>
+        <div class="layover">⏱ пересадка в Дохе, точное время стыковки сайт не детализирует отдельной строкой</div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">перелёт ≈ 15 ч 05 мин</div>
+            <div class="place">Доха → Сан-Паулу <small>(GRU), Гуарульюс</small></div>
+            <div class="flightinfo"><span class="op">Qatar Airways</span> · Wi-Fi Starlink на этом рейсе (заявлено на сайте)</div>
+          </div>
+        </div>
+        <div class="layover warn">⚠ пересадка в Сан-Паулу перед стыковочным рейсом LATAM — терминал/точное время на сайте не раскрыты</div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div></div>
+          <div class="body">
+            <div class="time">прибытие 14:20 <small>пн, 2 нояб.</small></div>
+            <div class="place">Сан-Паулу → Рио-де-Жанейро <small>(код RIO; конкретный аэропорт — GIG или SDU — сайт Qatar не уточняет)</small></div>
+            <div class="flightinfo"><span class="op">LATAM Airlines Brasil</span> · перелёт ≈ 1 ч</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-foot">
+        <div class="fare-note">🎒 Тариф Economy Comfort: выбор места (стандарт и предпочтительное) без доплаты, изменения без ограничений, отмена в любое время, апгрейд за Avios доступен.</div>
+        <div class="fare-note">⚠️ Финальный сегмент Сан-Паулу → Рио выполняет LATAM Airlines Brasil: комфорт на борту, по предупреждению самого Qatar Airways, «может отличаться» от рейсов Qatar Airways.</div>
+        <a class="cta" href="https://www.qatarairways.com/app/booking/passenger?widget=QR&searchType=F&addTaxToFare=Y&minPurTime=0&selLang=en&tripType=O&fromStation=BEG&toStation=RIO&departing=2026-11-01&bookingClass=E&adults=2&children=0&infants=0&ofw=0&teenager=0&flexibleDate=off&allowRedemption=N&airOfferItemId=c212cf17-ea14-4b38-a0ed-64979f58aa16&oBoundId=BC1-1-1I0QRZ_3QUIM4J7S6C4GSW26RC9N3OLDQ9J&dataId=2d0nsIuNW27l" target="_blank" rel="noopener">Открыть бронирование Qatar Airways →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="section-head">
+    <h2>Багаж и условия тарифа — подробно</h2>
+  </div>
+
+  <div class="bag-grid">
+    <div class="bag-card fade-up">
+      <h3>🔴 Turkish Airlines — Economy Flexible (M‑M‑U)</h3>
+      <dl class="bag">
+        <dt>Ручная кладь</dt><dd>1 место, 8 кг (макс. 55×40×23 см)</dd>
+        <dt>Регистрируемый багаж</dt><dd class="ok">2 места × 23 кг</dd>
+        <dt>Выбор места</dt><dd class="no">не включён</dd>
+        <dt>Смена рейса/даты</dt><dd class="ok">без сбора (до вылета)</dd>
+        <dt>Смена при неявке (no-show)</dt><dd class="no">не разрешена</dd>
+        <dt>Возврат билета</dt><dd class="ok">полный, до первого рейса</dd>
+        <dt>Возврат за 24 часа</dt><dd class="ok">полный</dd>
+        <dt>Мили Miles&amp;Smiles</dt><dd>7 573 мили + 7 573 статусные мили</dd>
+      </dl>
+      <div class="divider-thin"></div>
+      <p style="font-size:12.5px;color:var(--ink-soft);margin:0;">Сегмент Сан-Паулу → Рио выполняет Azul Linhas Aéreas: по предупреждению Turkish Airlines, нормы ручной клади, выбор места, питание, Wi-Fi, развлекательная система и начисление миль на этом участке «могут отличаться».</p>
+    </div>
+
+    <div class="bag-card fade-up">
+      <h3>🟣 Qatar Airways — Economy Comfort</h3>
+      <dl class="bag">
+        <dt>Ручная кладь</dt><dd>1 место, 7 кг</dd>
+        <dt>Регистрируемый багаж</dt><dd class="ok">2 места × 23 кг</dd>
+        <dt>Стандартный выбор места</dt><dd class="ok">без сбора</dd>
+        <dt>Предпочтительное место</dt><dd class="ok">без сбора</dd>
+        <dt>Смена рейса/маршрута</dt><dd class="ok">неограниченно, без сбора</dd>
+        <dt>Отмена билета</dt><dd class="ok">в любое время</dd>
+        <dt>Апгрейд за мили</dt><dd class="ok">доступен (Avios)</dd>
+        <dt>Avios за бронирование</dt><dd>9 585 (нужен вход в Privilege Club)</dd>
+      </dl>
+      <div class="divider-thin"></div>
+      <p style="font-size:12.5px;color:var(--ink-soft);margin:0;">Сегмент Сан-Паулу → Рио выполняет LATAM Airlines Brasil: страница бронирования Qatar Airways явно предупреждает, что впечатление на борту «может отличаться» от рейсов Qatar Airways.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p><b>Источники и как считались цифры</b> — всё взято напрямую со страниц бронирования авиакомпаний по ссылкам выше (скриншоты от 13 сентября 2026, вылет 1 ноября 2026, 2 взрослых пассажира, эконом-класс):</p>
+    <ul>
+      <li>Turkish Airlines: цена RSD 175 982,00 за пассажира / RSD 351 964,00 за двоих (тариф Flexible, класс M‑M‑U), маршрут и расписание по сегментам BEG–IST–GRU–SDU, детали тарифа со страницы «Правила тарифа».</li>
+      <li>Qatar Airways: итог по поездке €2 497,62 (карточка «Trip details»), тариф Economy Comfort €2 498 за двоих, маршрут BEG–DOH–GRU–RIO, начисление 9 585 Avios.</li>
+      <li>Курс USD/RSD ≈ 101,12 на 13.09.2026 — <a href="https://www.investing.com/currencies/usd-rsd" target="_blank" rel="noopener">Investing.com</a>.</li>
+      <li>Курс EUR/USD ≈ 1,1598 на 13.09.2026 — <a href="https://wise.com/us/currency-converter/eur-to-usd-rate" target="_blank" rel="noopener">Wise</a> / <a href="https://www.xe.com/en-us/currencyconverter/convert/?Amount=1&From=EUR&To=USD" target="_blank" rel="noopener">XE</a>.</li>
+    </ul>
+    <p style="margin-top:14px;">Курсы валют плавающие и меняются ежедневно — суммы в долларах приблизительные (пересчёт на дату подготовки страницы), точная цена в вашей валюте всегда — на самой странице оплаты авиакомпании. Некоторые детали (терминал в Дохе, точное время стыковки в Сан-Паулу для рейса Qatar, конкретный аэропорт прибытия в Рио — GIG или SDU) сайт Qatar Airways не раскрывает на этапе поиска; это отмечено в карточке маршрута выше, а не додумано.</p>
+  </footer>
+
+</div>
+
+<script type="module">
+  import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('.fade-up').forEach(el=>{
+    el.style.opacity = 1;
+    el.style.transform = 'none';
+  });
+
+  if(!prefersReduced){
+    document.querySelectorAll('.fade-up').forEach(el=>{
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(14px)';
+    });
+    inView('.fade-up', (info) => {
+      animate(info.target, { opacity: [0,1], y: [14,0] }, { duration: 0.6, easing: [0.22,1,0.36,1] });
+    }, { margin: "0px 0px -10% 0px" });
+
+    animate('.cta', { scale: 1 }, { duration: 0 });
+    document.querySelectorAll('.cta').forEach(btn=>{
+      btn.addEventListener('mouseenter', ()=> animate(btn, { scale: 1.02 }, { duration: 0.2 }));
+      btn.addEventListener('mouseleave', ()=> animate(btn, { scale: 1 }, { duration: 0.2 }));
+    });
+  }
+</script>
