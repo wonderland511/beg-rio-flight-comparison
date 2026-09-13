@@ -1,5 +1,5 @@
 <title>Белград — Рио</title>
-<meta name="description" content="Turkish Airlines vs Qatar Airways, 2 взрослых, 1 ноября 2026">
+<meta name="description" content="Turkish Airlines, Qatar Airways и Emirates, 2 взрослых, 1 ноября 2026">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -149,8 +149,7 @@ table.cmp td.win::before{
 .price-native{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
 
 /* ---- itinerary cards ---- */
-.cards{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-@media (max-width:860px){ .cards{ grid-template-columns:1fr; } }
+.cards{ display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px; align-items:start; }
 
 .card{
   background:var(--paper);
@@ -240,8 +239,7 @@ table.cmp td.win::before{
 :root[data-theme="dark"] .cta, @media (prefers-color-scheme:dark){ }
 
 /* baggage grid */
-.bag-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:8px; }
-@media (max-width:860px){ .bag-grid{ grid-template-columns:1fr; } }
+.bag-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-top:8px; }
 .bag-card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px; box-shadow:var(--shadow); }
 .bag-card h3{ font-family:'Fraunces',serif; font-size:18px; margin:0 0 14px; }
 dl.bag{ margin:0; display:grid; grid-template-columns:1fr auto; gap:10px 16px; }
@@ -284,12 +282,12 @@ footer li{ margin-bottom:4px; }
   <div class="wrap">
     <p class="eyebrow">Сравнение перелётов · 2 взрослых пассажира</p>
     <h1 class="route fade-up">Белград <span class="arrow">→</span> Рио-де-Жанейро</h1>
-    <p class="sub">Turkish Airlines и Qatar Airways, вылет в воскресенье 1 ноября 2026. Цены указаны в долларах США по приблизительному курсу на 13 сентября 2026.</p>
+    <p class="sub">Turkish Airlines, Qatar Airways и Emirates — три варианта перелёта на воскресенье 1 ноября 2026. Цены указаны в долларах США по приблизительному курсу на дату подготовки страницы.</p>
     <div class="meta-row">
       <span class="chip">📅 <b>1 нояб. 2026</b>, туда</span>
       <span class="chip">👥 <b>2</b> взрослых</span>
       <span class="chip">💺 Economy</span>
-      <span class="chip">🎫 Один билет = оба сегмента</span>
+      <span class="chip">✈️ <b>3</b> варианта перелёта</span>
     </div>
   </div>
 </header>
@@ -308,6 +306,7 @@ footer li{ margin-bottom:4px; }
           <th>Параметр</th>
           <th class="carrier-th">🔴 Turkish Airlines</th>
           <th class="carrier-th">🟣 Qatar Airways</th>
+          <th class="carrier-th">🟢 Emirates</th>
         </tr>
       </thead>
       <tbody>
@@ -319,46 +318,57 @@ footer li{ margin-bottom:4px; }
           <td class="win">
             <div class="price-usd">≈ $2 896.74</div>
           </td>
+          <td>
+            <div class="price-usd">≈ $6 239.96</div>
+          </td>
         </tr>
         <tr>
           <td class="label">Тариф</td>
           <td>Economy <b>Flexible</b> (класс M‑M‑U)</td>
           <td>Economy <b>Comfort</b></td>
+          <td>Economy <b>Flex</b></td>
         </tr>
         <tr>
           <td class="label">Общее время в пути</td>
-          <td class="win">23 ч 20 мин</td>
+          <td>23 ч 20 мин</td>
           <td>30 ч 25 мин</td>
+          <td class="win">21 ч 35 мин</td>
         </tr>
         <tr>
           <td class="label">Пересадки</td>
           <td class="win">1 пересадка — Стамбул (IST)</td>
           <td>2 пересадки — Доха (DOH) и Сан-Паулу (GRU)</td>
+          <td class="win">1 пересадка — Дубай (DXB)</td>
         </tr>
         <tr>
           <td class="label">Кто выполняет рейсы</td>
           <td>Turkish Airlines + <b>Azul Linhas Aéreas</b> (последний сегмент)</td>
           <td>Qatar Airways + <b>LATAM Airlines Brasil</b> (последний сегмент)</td>
+          <td><b>flydubai</b> (1‑й участок) + Emirates (2‑й участок)</td>
         </tr>
         <tr>
           <td class="label">Регистрируемый багаж</td>
           <td class="win">2 места × 23 кг на пассажира</td>
           <td class="win">2 места × 23 кг на пассажира</td>
+          <td class="win">2 места × 23 кг на пассажира</td>
         </tr>
         <tr>
           <td class="label">Ручная кладь</td>
-          <td>1 место, 8 кг</td>
-          <td class="win">1 место, 7 кг (лимит по факту у Qatar ниже нормы)</td>
+          <td class="win">1 место, 8 кг</td>
+          <td>1 место, 7 кг</td>
+          <td>1 место, 7 кг</td>
         </tr>
         <tr>
           <td class="label">Выбор места</td>
           <td>💳 платно (не входит в тариф Flexible)</td>
           <td class="win">✅ стандартный и предпочтительный — бесплатно</td>
+          <td class="win">✅ бесплатно в тарифе Flex</td>
         </tr>
         <tr>
           <td class="label">Возврат / изменения</td>
           <td>Изменение без сбора · полный возврат в течение 24 ч</td>
-          <td>Изменения не ограничены (без доп. сбора) · отмена в любое время</td>
+          <td class="win">Изменения не ограничены (без доп. сбора) · отмена в любое время</td>
+          <td>Смена $174,08 / возврат $261,11 за билет (в тарифе Flex Plus — бесплатно, но дороже)</td>
         </tr>
       </tbody>
     </table>
@@ -491,6 +501,51 @@ footer li{ margin-bottom:4px; }
       </div>
     </article>
 
+    <!-- EMIRATES -->
+    <article class="card fade-up">
+      <div class="card-head">
+        <div class="name">Emirates
+          <span>+ flydubai на первом участке</span>
+        </div>
+        <div class="badge-price">
+          <div class="usd">$6 239.96</div>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="num">21ч 35м</div><div class="cap">в пути всего</div></div>
+        <div class="stat"><div class="num">1</div><div class="cap">пересадка</div></div>
+        <div class="stat"><div class="num">2</div><div class="cap">перелёта</div></div>
+      </div>
+
+      <div class="timeline">
+        <div class="leg">
+          <div class="rail"><div class="dot"></div><div class="line"></div></div>
+          <div class="body">
+            <div class="time">22:20 · вс, 1 нояб.</div>
+            <div class="place">Белград <small>(BEG)</small></div>
+            <div class="dur-badge"><span class="ic">✈</span> 5 ч 15 мин в полёте</div>
+            <div class="flightinfo"><span class="op">EK2295</span> · Emirates, выполняет flydubai</div>
+          </div>
+        </div>
+        <div class="layover">⏱ пересадка <span class="dur">1 ч 30 мин</span> в Дубае — Dubai International (DXB)</div>
+
+        <div class="leg">
+          <div class="rail"><div class="dot"></div></div>
+          <div class="body">
+            <div class="time">08:05 → 15:55 <small>пн, 2 нояб.</small></div>
+            <div class="place">Дубай → Рио-де-Жанейро <small>(GIG)</small></div>
+            <div class="dur-badge"><span class="ic">✈</span> 14 ч 50 мин в полёте</div>
+            <div class="flightinfo"><span class="op">EK247</span> · Emirates</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-foot">
+        <div class="fare-note">🎒 Тариф Economy Flex: выбор места бесплатно, смена билета $174,08 и возврат $261,11 за билет; в более дорогом тарифе Flex Plus (≈ $8 022,49 за двоих) смена и возврат — бесплатно.</div>
+        <a class="cta" href="https://www.emirates.com/booking/search-results/?pub=%2Fenglish&refreshId=820df4&ttid=VnMAdWlgZk10VnkDWmVmVD99QRdnUGVUAlxlSAclDHQ%252BYmJA" target="_blank" rel="noopener">Открыть бронирование Emirates →</a>
+      </div>
+    </article>
+
   </div>
 
   <div class="section-head">
@@ -520,6 +575,18 @@ footer li{ margin-bottom:4px; }
         <dt>Предпочтительное место</dt><dd class="ok">без сбора</dd>
         <dt>Смена рейса/маршрута</dt><dd class="ok">неограниченно, без сбора</dd>
         <dt>Отмена билета</dt><dd class="ok">в любое время</dd>
+      </dl>
+    </div>
+
+    <div class="bag-card fade-up">
+      <h3>🟢 Emirates — Economy Flex</h3>
+      <dl class="bag">
+        <dt>Ручная кладь</dt><dd>1 место, 7 кг</dd>
+        <dt>Регистрируемый багаж</dt><dd class="ok">2 места × 23 кг</dd>
+        <dt>Выбор места</dt><dd class="ok">бесплатно</dd>
+        <dt>Смена билета</dt><dd class="no">$174,08 / билет</dd>
+        <dt>Возврат билета</dt><dd class="no">$261,11 / билет</dd>
+        <dt>Неявка на рейс</dt><dd class="no">от $348,15 / билет</dd>
       </dl>
     </div>
   </div>
