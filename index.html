@@ -1,5 +1,5 @@
 <title>Белград — Рио</title>
-<meta name="description" content="Turkish Airlines, Qatar Airways и Emirates, 2 взрослых, 1 ноября 2026">
+<meta name="description" content="Turkish Airlines, Emirates и Turkish+LATAM, 2 взрослых, 1 ноября 2026">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -109,6 +109,7 @@ h1.route .arrow{ color:var(--gold); font-size:0.6em; }
   display:flex; align-items:center; gap:7px;
 }
 .chip b{ color:var(--ink); font-weight:600; }
+.chip.priority-chip{ background:var(--gold-soft); border-color:var(--gold); color:var(--ink); font-weight:600; }
 
 /* ---- section titles ---- */
 .section-head{
@@ -137,6 +138,8 @@ table.cmp thead th{
   font-weight:600; background:var(--accent-soft); border-bottom:1px solid var(--line-strong);
 }
 table.cmp thead th.carrier-th{ color:var(--ink); font-size:14px; text-transform:none; letter-spacing:0; }
+table.cmp thead th.priority-th{ background:var(--gold-soft); box-shadow:inset 0 -2px 0 var(--gold); }
+table.cmp td.priority-col{ box-shadow:inset 3px 0 0 var(--gold); }
 table.cmp tbody tr:last-child td{ border-bottom:none; }
 table.cmp td.label{ color:var(--ink-soft); font-size:13.5px; width:190px; white-space:nowrap; }
 table.cmp td.win{ position:relative; }
@@ -158,6 +161,15 @@ table.cmp td.win::before{
   box-shadow:var(--shadow);
   overflow:hidden;
   display:flex; flex-direction:column;
+}
+.card.priority{
+  border:2px solid var(--gold);
+  box-shadow: 0 2px 4px rgba(20,20,15,0.06), 0 16px 32px -14px color-mix(in srgb, var(--gold) 45%, transparent);
+}
+.priority-ribbon{
+  background:var(--gold); color:var(--paper);
+  font-size:12px; font-weight:700; letter-spacing:.03em;
+  padding:8px 24px; display:flex; align-items:center; gap:7px;
 }
 .card-head{
   padding:22px 24px 18px;
@@ -243,6 +255,7 @@ table.cmp td.win::before{
 /* baggage grid */
 .bag-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-top:8px; }
 .bag-card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px; box-shadow:var(--shadow); }
+.bag-card.priority{ border:2px solid var(--gold); }
 .bag-card h3{ font-family:'Fraunces',serif; font-size:18px; margin:0 0 14px; }
 dl.bag{ margin:0; display:grid; grid-template-columns:1fr auto; gap:10px 16px; }
 dl.bag dt{ color:var(--ink-soft); font-size:13.5px; }
@@ -284,12 +297,13 @@ footer li{ margin-bottom:4px; }
   <div class="wrap">
     <p class="eyebrow">Сравнение перелётов · 2 взрослых пассажира</p>
     <h1 class="route fade-up">Белград <span class="arrow">→</span> Рио-де-Жанейро</h1>
-    <p class="sub">Turkish Airlines, Qatar Airways, Emirates и раздельная связка Turkish + LATAM — четыре варианта перелёта на воскресенье 1 ноября 2026. Цены указаны в долларах США по приблизительному курсу на дату подготовки страницы.</p>
+    <p class="sub">Turkish Airlines, Emirates и раздельная связка Turkish + LATAM — три варианта перелёта на воскресенье 1 ноября 2026. Цены указаны в долларах США по приблизительному курсу на дату подготовки страницы.</p>
     <div class="meta-row">
       <span class="chip">📅 <b>1 нояб. 2026</b>, туда</span>
       <span class="chip">👥 <b>2</b> взрослых</span>
       <span class="chip">💺 Economy</span>
-      <span class="chip">✈️ <b>4</b> варианта перелёта</span>
+      <span class="chip">✈️ <b>3</b> варианта перелёта</span>
+      <span class="chip priority-chip">🏆 Рекомендуем: Turkish + LATAM</span>
     </div>
   </div>
 </header>
@@ -307,82 +321,70 @@ footer li{ margin-bottom:4px; }
         <tr>
           <th>Параметр</th>
           <th class="carrier-th">🔴 Turkish Airlines</th>
-          <th class="carrier-th">🟣 Qatar Airways</th>
           <th class="carrier-th">🟢 Emirates</th>
-          <th class="carrier-th">🔵 Turkish + LATAM</th>
+          <th class="carrier-th priority-th">🏆 Turkish + LATAM</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="label">Стоимость, 2 пассажира</td>
-          <td>
-            <div class="price-usd">≈ $3 480.55</div>
-          </td>
           <td class="win">
-            <div class="price-usd">≈ $2 896.74</div>
+            <div class="price-usd">≈ $3 480.55</div>
           </td>
           <td>
             <div class="price-usd">≈ $6 239.96</div>
           </td>
-          <td>
+          <td class="priority-col">
             <div class="price-usd">≈ $3 897.04</div>
           </td>
         </tr>
         <tr>
           <td class="label">Тариф</td>
           <td>Economy <b>Flexible</b> (класс M‑M‑U)</td>
-          <td>Economy <b>Comfort</b></td>
           <td>Economy <b>Flex</b></td>
-          <td>Economy Flexible + LATAM <b>Standard</b> (2 отдельных билета)</td>
+          <td class="priority-col">Economy Flexible + LATAM <b>Standard</b> (2 отдельных билета)</td>
         </tr>
         <tr>
           <td class="label">Общее время в пути</td>
           <td>23 ч 20 мин</td>
-          <td>30 ч 25 мин</td>
           <td>21 ч 35 мин</td>
-          <td class="win">21 ч 15 мин</td>
+          <td class="win priority-col">21 ч 15 мин</td>
         </tr>
         <tr>
           <td class="label">Пересадки</td>
           <td class="win">1 пересадка — Стамбул (IST)</td>
-          <td>2 пересадки — Доха (DOH) и Сан-Паулу (GRU)</td>
           <td class="win">1 пересадка — Дубай (DXB)</td>
-          <td class="win">1 пересадка — Сан-Паулу (GRU), днём, без ночёвки</td>
+          <td class="win priority-col">1 пересадка — Сан-Паулу (GRU), днём, без ночёвки</td>
         </tr>
         <tr>
           <td class="label">Кто выполняет рейсы</td>
           <td>Turkish Airlines + <b>Azul Linhas Aéreas</b> (последний сегмент)</td>
-          <td>Qatar Airways + <b>LATAM Airlines Brasil</b> (последний сегмент)</td>
           <td><b>flydubai</b> (1‑й участок) + Emirates (2‑й участок)</td>
-          <td>Turkish Airlines, затем отдельным билетом <b>LATAM Airlines Brasil</b></td>
+          <td class="priority-col">Turkish Airlines, затем отдельным билетом <b>LATAM Airlines Brasil</b></td>
         </tr>
         <tr>
           <td class="label">Регистрируемый багаж</td>
           <td class="win">2 места × 23 кг на пассажира</td>
           <td class="win">2 места × 23 кг на пассажира</td>
-          <td class="win">2 места × 23 кг на пассажира</td>
-          <td class="win">2×23 кг на Turkish + 1×23 кг на LATAM Standard</td>
+          <td class="win priority-col">2×23 кг на Turkish + 1×23 кг на LATAM Standard</td>
         </tr>
         <tr>
           <td class="label">Ручная кладь</td>
           <td class="win">1 место, 8 кг</td>
           <td>1 место, 7 кг</td>
-          <td>1 место, 7 кг</td>
-          <td>8 кг на Turkish; 12 кг (55×35×25 см) на LATAM</td>
+          <td class="priority-col">8 кг на Turkish; 12 кг (55×35×25 см) на LATAM</td>
         </tr>
         <tr>
           <td class="label">Выбор места</td>
           <td>💳 платно (не входит в тариф Flexible)</td>
-          <td class="win">✅ стандартный и предпочтительный — бесплатно</td>
           <td class="win">✅ бесплатно в тарифе Flex</td>
-          <td>💳 платно на Turkish; не входит в LATAM Standard (есть в тарифе Full)</td>
+          <td class="priority-col">💳 платно на Turkish; не входит в LATAM Standard (есть в тарифе Full)</td>
         </tr>
         <tr>
           <td class="label">Возврат / изменения</td>
-          <td>Изменение без сбора · полный возврат в течение 24 ч</td>
-          <td class="win">Изменения не ограничены (без доп. сбора) · отмена в любое время</td>
+          <td class="win">Изменение без сбора · полный возврат в течение 24 ч</td>
           <td>Смена $174,08 / возврат $261,11 за билет (в тарифе Flex Plus — бесплатно, но дороже)</td>
-          <td>Turkish — как в тарифе Flexible; тариф LATAM <b>Standard — невозвратный</b> (Flex с возвратом в кредит — дороже)</td>
+          <td class="priority-col">Turkish — как в тарифе Flexible; тариф LATAM <b>Standard — невозвратный</b> (Flex с возвратом в кредит — дороже)</td>
         </tr>
       </tbody>
     </table>
@@ -459,62 +461,6 @@ footer li{ margin-bottom:4px; }
       </div>
     </article>
 
-    <!-- QATAR -->
-    <article class="card fade-up">
-      <div class="card-head">
-        <div class="name">Qatar Airways
-          <span>+ LATAM Airlines Brasil на финальном сегменте</span>
-        </div>
-        <div class="badge-price">
-          <div class="usd">$2 896.74</div>
-        </div>
-      </div>
-      <div class="stat-row">
-        <div class="stat"><div class="num">30ч 25м</div><div class="cap">в пути всего</div></div>
-        <div class="stat"><div class="num">2</div><div class="cap">пересадки</div></div>
-        <div class="stat"><div class="num">3</div><div class="cap">перелёта</div></div>
-      </div>
-
-      <div class="timeline">
-        <div class="leg">
-          <div class="rail"><div class="dot"></div><div class="line"></div></div>
-          <div class="body">
-            <div class="time">11:55 → 18:55 · вс, 1 нояб.</div>
-            <div class="place">Белград <small>(BEG)</small> → Доха <small>(DOH)</small></div>
-            <div class="dur-badge"><span class="ic">✈</span> 5 ч в полёте</div>
-            <div class="flightinfo"><span class="op">QR232</span> · Qatar Airways</div>
-          </div>
-        </div>
-        <div class="layover">⏱ пересадка <span class="dur">6 ч 40 мин</span> в Дохе — Hamad International Airport</div>
-
-        <div class="leg">
-          <div class="rail"><div class="dot"></div><div class="line"></div></div>
-          <div class="body">
-            <div class="time">01:35 → 10:40 <small>пн, 2 нояб.</small></div>
-            <div class="place">Доха → Сан-Паулу <small>(GRU), Гуарульюс</small></div>
-            <div class="dur-badge"><span class="ic">✈</span> 15 ч 05 мин в полёте</div>
-            <div class="flightinfo"><span class="op">QR779</span> · Qatar Airways · Wi-Fi Starlink</div>
-          </div>
-        </div>
-        <div class="layover warn">⚠ пересадка <span class="dur">2 ч 40 мин</span> в Сан-Паулу — Guarulhos (GRU) перед рейсом LATAM</div>
-
-        <div class="leg">
-          <div class="rail"><div class="dot"></div></div>
-          <div class="body">
-            <div class="time">13:20 → 14:20 <small>пн, 2 нояб.</small></div>
-            <div class="place">Сан-Паулу → Рио-де-Жанейро <small>(GIG), Galeão — Antonio Carlos Jobim International</small></div>
-            <div class="dur-badge"><span class="ic">✈</span> 1 ч в полёте</div>
-            <div class="flightinfo"><span class="op">QR7270</span> · LATAM Airlines Brasil</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-foot">
-        <div class="fare-note">🎒 Тариф Economy Comfort: выбор места (стандарт и предпочтительное) без доплаты, изменения без ограничений, отмена в любое время, апгрейд за Avios доступен.</div>
-        <a class="cta" href="https://www.qatarairways.com/app/booking/passenger?widget=QR&searchType=F&addTaxToFare=Y&minPurTime=0&selLang=en&tripType=O&fromStation=BEG&toStation=RIO&departing=2026-11-01&bookingClass=E&adults=2&children=0&infants=0&ofw=0&teenager=0&flexibleDate=off&allowRedemption=N&airOfferItemId=c212cf17-ea14-4b38-a0ed-64979f58aa16&oBoundId=BC1-1-1I0QRZ_3QUIM4J7S6C4GSW26RC9N3OLDQ9J&dataId=2d0nsIuNW27l" target="_blank" rel="noopener">Открыть бронирование Qatar Airways →</a>
-      </div>
-    </article>
-
     <!-- EMIRATES -->
     <article class="card fade-up">
       <div class="card-head">
@@ -561,7 +507,8 @@ footer li{ margin-bottom:4px; }
     </article>
 
     <!-- TURKISH + LATAM (SPLIT TICKETS) -->
-    <article class="card fade-up">
+    <article class="card priority fade-up">
+      <div class="priority-ribbon">🏆 Рекомендуемый вариант</div>
       <div class="card-head">
         <div class="name">Turkish + LATAM
           <span>2 отдельных билета · без ночной пересадки в Сан-Паулу</span>
@@ -648,18 +595,6 @@ footer li{ margin-bottom:4px; }
     </div>
 
     <div class="bag-card fade-up">
-      <h3>🟣 Qatar Airways — Economy Comfort</h3>
-      <dl class="bag">
-        <dt>Ручная кладь</dt><dd>1 место, 7 кг</dd>
-        <dt>Регистрируемый багаж</dt><dd class="ok">2 места × 23 кг</dd>
-        <dt>Стандартный выбор места</dt><dd class="ok">без сбора</dd>
-        <dt>Предпочтительное место</dt><dd class="ok">без сбора</dd>
-        <dt>Смена рейса/маршрута</dt><dd class="ok">неограниченно, без сбора</dd>
-        <dt>Отмена билета</dt><dd class="ok">в любое время</dd>
-      </dl>
-    </div>
-
-    <div class="bag-card fade-up">
       <h3>🟢 Emirates — Economy Flex</h3>
       <dl class="bag">
         <dt>Ручная кладь</dt><dd>1 место, 7 кг</dd>
@@ -671,8 +606,8 @@ footer li{ margin-bottom:4px; }
       </dl>
     </div>
 
-    <div class="bag-card fade-up">
-      <h3>🔵 Turkish + LATAM — раздельные билеты</h3>
+    <div class="bag-card priority fade-up">
+      <h3>🏆 Turkish + LATAM — раздельные билеты (рекомендуем)</h3>
       <dl class="bag">
         <dt>Ручная кладь (Turkish)</dt><dd>1 место, 8 кг</dd>
         <dt>Регистрируемый багаж (Turkish)</dt><dd class="ok">2 места × 23 кг</dd>
