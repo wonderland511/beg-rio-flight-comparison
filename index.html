@@ -215,6 +215,21 @@ table.cmp td.win::before{
 }
 .dur-badge .ic{ font-size:14px; }
 
+.alt-options{ display:flex; flex-direction:column; gap:6px; margin-top:10px; }
+.alt-opt{
+  display:flex; justify-content:space-between; align-items:center; gap:12px;
+  padding:8px 12px; border-radius:9px; border:1px solid var(--line);
+  font-size:12.5px; color:var(--ink-soft);
+}
+.alt-opt .alt-time{ color:var(--ink); font-weight:600; }
+.alt-opt .alt-price{ font-family:'IBM Plex Mono',monospace; font-weight:600; white-space:nowrap; }
+.alt-opt.chosen{ border-color:var(--accent); background:var(--accent-soft); }
+.alt-opt.chosen .alt-price{ color:var(--accent); }
+.alt-opt .alt-tag{
+  font-size:10px; text-transform:uppercase; letter-spacing:.05em;
+  background:var(--good-soft); color:var(--good); padding:2px 7px; border-radius:999px; margin-left:8px;
+}
+
 .layover{
   margin:14px 0 14px 70px;
   padding:12px 18px;
@@ -323,7 +338,7 @@ footer li{ margin-bottom:4px; }
           <th class="carrier-th">🔴 Turkish Airlines</th>
           <th class="carrier-th">🟢 Emirates</th>
           <th class="carrier-th priority-th">🏆 Turkish + LATAM</th>
-          <th class="carrier-th">🟠 Emirates + LATAM</th>
+          <th class="carrier-th">🟠 Emirates + LATAM/GOL</th>
         </tr>
       </thead>
       <tbody>
@@ -368,7 +383,7 @@ footer li{ margin-bottom:4px; }
           <td>Turkish Airlines + <b>Azul Linhas Aéreas</b> (последний сегмент)</td>
           <td><b>flydubai</b> (1‑й участок) + Emirates (2‑й участок)</td>
           <td class="priority-col">Turkish Airlines, затем отдельным билетом <b>LATAM Airlines Brasil</b></td>
-          <td><b>flydubai</b> + Emirates до Сан-Паулу, затем отдельным билетом <b>LATAM Airlines Brasil</b></td>
+          <td><b>flydubai</b> + Emirates до Сан-Паулу, затем отдельным билетом <b>LATAM</b> или <b>GOL</b> на выбор</td>
         </tr>
         <tr>
           <td class="label">Регистрируемый багаж</td>
@@ -589,8 +604,8 @@ footer li{ margin-bottom:4px; }
     <!-- EMIRATES + LATAM (SPLIT TICKETS) -->
     <article class="card fade-up">
       <div class="card-head">
-        <div class="name">Emirates + LATAM
-          <span>2 отдельных билета · до Сан-Паулу, затем отдельно до Рио</span>
+        <div class="name">Emirates + LATAM/GOL
+          <span>2 отдельных билета · до Сан-Паулу, затем на выбор LATAM или GOL до Рио</span>
         </div>
         <div class="badge-price">
           <div class="usd">$4 433.92</div>
@@ -628,19 +643,27 @@ footer li{ margin-bottom:4px; }
         <div class="leg">
           <div class="rail"><div class="dot"></div></div>
           <div class="body">
-            <div class="time">20:25 → 21:30 · пн, 2 нояб.</div>
-            <div class="place">Сан-Паулу <small>(GRU)</small> → Рио-де-Жанейро <small>(GIG)</small></div>
-            <div class="dur-badge"><span class="ic">✈</span> 1 ч 05 мин в полёте, прямой</div>
-            <div class="flightinfo">LATAM Airlines Brasil · билет 2, покупается отдельно</div>
+            <div class="place">Сан-Паулу <small>(GRU)</small> → Рио-де-Жанейро <small>(GIG)</small> — билет 2, покупается отдельно, на выбор 2 рейса:</div>
+            <div class="alt-options">
+              <div class="alt-opt chosen">
+                <span class="alt-time">20:25 → 21:30 · LATAM Airlines Brasil<span class="alt-tag">дешевле</span></span>
+                <span class="alt-price">$220.91 / пасс.</span>
+              </div>
+              <div class="alt-opt">
+                <span class="alt-time">19:15 → 20:20 · GOL (тариф Classic)<span class="alt-tag">быстрее рейс</span></span>
+                <span class="alt-price">$299.17 / пасс.</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="card-foot">
-        <div class="fare-note">🎟️ Два отдельных PNR: Emirates Economy Flex Plus до Сан-Паулу (EUR 3 460,56 за двоих ≈ $3 992,10 — включает бесплатный выбор места, бесплатную смену и возврат, штраф за неявку от €300–450) + отдельный билет LATAM Standard, Сан-Паулу → Рио напрямую (USD 220,91 / пассажир). Между билетами нет защиты стыковки: при задержке Emirates придётся покупать новый билет LATAM.</div>
+        <div class="fare-note">🎟️ Два отдельных PNR: Emirates Economy Flex Plus до Сан-Паулу (EUR 3 460,56 за двоих ≈ $3 992,10 — включает бесплатный выбор места, бесплатную смену и возврат, штраф за неявку от €300–450) + отдельный билет Сан-Паулу → Рио напрямую: либо LATAM Standard (USD 220,91 / пассажир, вылет позже — удобнее по стыковке), либо GOL Classic (USD 299,17 / пассажир, вылет раньше — на рейс нужно успеть за 1 ч 40 мин после посадки Emirates). Между билетами нет защиты стыковки: при задержке Emirates придётся покупать новый билет.</div>
         <div class="cta-row">
           <a class="cta" href="https://www.emirates.com/booking/search-results/?searchRequest=eyJqb3VybmV5VHlwZSI6Ik9ORVdBWSIsImJvb2tpbmdUeXBlIjoiUkVWRU5VRSIsInBhc3NlbmdlcnMiOlt7InR5cGUiOiJBRFQiLCJjb3VudCI6Mn1dLCJzZWdtZW50cyI6W3siZGVwYXJ0dXJlIjoiQkVHIiwiYXJyaXZhbCI6IkdSVSIsInRyYXZlbERhdGUiOiIyMDI2LTExLTAxIiwiY2FiaW5DbGFzcyI6IlkifV0sInJlZmVycmVyIjoiL2Jvb2tpbmcvZXJyb3IiLCJzb3VyY2UiOiJlcnJvci1wYWdlIn0%3D&refreshId=f58fb9&ttid=BnEBcDkzZ0x0AHNQVWVmX21xQRdiB2FUVF03TwZ2WiJvYm5H" target="_blank" rel="noopener">Билет 1 — Emirates →</a>
           <a class="cta" href="https://www.latamairlines.com/uy/en/flight-offers?origin=GRU&outbound=2026-11-02T00%3A00%3A00.000Z&destination=RIO&adt=2&chd=0&inf=0&trip=OW&cabin=Economy&redemption=false&sort=RECOMMENDED&exp_id=eeb010dd-c316-4447-9523-78a23ecfba7d" target="_blank" rel="noopener">Билет 2 — LATAM →</a>
+          <a class="cta" href="https://b2c.voegol.com.br/compra/selecao-de-voo2/ida" target="_blank" rel="noopener">Билет 2 — GOL →</a>
         </div>
       </div>
     </article>
@@ -693,7 +716,7 @@ footer li{ margin-bottom:4px; }
     </div>
 
     <div class="bag-card fade-up">
-      <h3>🟠 Emirates + LATAM — раздельные билеты</h3>
+      <h3>🟠 Emirates + LATAM/GOL — раздельные билеты</h3>
       <dl class="bag">
         <dt>Ручная кладь (Emirates)</dt><dd>1 место, 7 кг</dd>
         <dt>Регистрируемый багаж (Emirates)</dt><dd class="ok">2 места × 23 кг</dd>
@@ -702,6 +725,10 @@ footer li{ margin-bottom:4px; }
         <dt>Ручная кладь (LATAM)</dt><dd>1 место, 12 кг (55×35×25 см)</dd>
         <dt>Регистрируемый багаж (LATAM)</dt><dd class="ok">1 место, 23 кг</dd>
         <dt>Выбор места (LATAM Standard)</dt><dd class="no">не включено</dd>
+        <dt>Ручная кладь (GOL Classic)</dt><dd>1 место, 10 кг + сумка 12 кг</dd>
+        <dt>Регистрируемый багаж (GOL Classic)</dt><dd class="ok">1 место, 23 кг</dd>
+        <dt>Выбор места (GOL Classic)</dt><dd class="ok">основное место включено</dd>
+        <dt>Возврат (GOL Classic)</dt><dd class="no">невозвратный</dd>
         <dt>Защита стыковки между билетами</dt><dd class="no">отсутствует</dd>
       </dl>
     </div>
